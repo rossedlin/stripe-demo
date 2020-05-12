@@ -1449,16 +1449,16 @@
         },
         {
             "name": "rossedlin/edlin-php",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rossedlin/edlin-php.git",
-                "reference": "9a0add1d117f29fe81b23f33f7c99939e00a07ac"
+                "reference": "23f5faed2b1f3bcb17aad841e6b901bf0161babe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/rossedlin/edlin-php/archive/v3.0.0.zip",
-                "reference": "9a0add1d117f29fe81b23f33f7c99939e00a07ac"
+                "url": "https://github.com/rossedlin/edlin-php/archive/v3.0.1.zip",
+                "reference": "23f5faed2b1f3bcb17aad841e6b901bf0161babe"
             },
             "require": {
                 "php": ">=7.1"
@@ -1484,7 +1484,7 @@
                 "php",
                 "ross"
             ],
-            "time": "2020-05-12T08:26:22+00:00"
+            "time": "2020-05-12T09:05:55+00:00"
         },
         {
             "name": "stripe/stripe-php",
