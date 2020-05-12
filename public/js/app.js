@@ -32169,7 +32169,7 @@ return jQuery;
         // Escape characters that can't be included in string literals.
         source += string.slice(index, offset).replace(reUnescapedString, escapeStringChar);
 
-        // Replace delimiters with snippets.
+        // Replace delimiters with stripe.
         if (escapeValue) {
           isEscaping = true;
           source += "' +\n__e(" + escapeValue + ") +\n'";

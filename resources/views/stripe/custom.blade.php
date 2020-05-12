@@ -11,7 +11,7 @@
  * @var string $publish_key
  */
 ?>
-<div class="card col-xs-12 col-lg-12" style="margin-bottom: 30px;">
+<div class="card col-xs-12 col-lg-12" style="padding: 50px;">
     <div class="card-block">
         <h4 class="card-title">Stripe Checkout - ID #<?= $id ?></h4>
         <p class="card-text">
