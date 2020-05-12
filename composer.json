@@ -12,7 +12,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "rossedlin/cryslo-php": "2.0.*",
+        "rossedlin/edlin-php": "3.0.*",
         "stripe/stripe-php": "^3.23"
     },
     "require-dev": {
