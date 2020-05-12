@@ -18,13 +18,13 @@
                 <a href="https://www.rossedlin.com/" class="navbar-brand u-header__logo">
 
                     <img class="u-header__logo-img u-header__logo-img--main g-width-90"
-                         src="<?= \Cryslo\Core\Utils::addVersionToCssFile('/img/logo.png') ?>"
+                         src="<?= \Edlin\Core\Utils::addVersionToFile('/img/logo.png') ?>"
                          width="120"
                          height="48"
                          alt="Ross Edlin Logo">
 
                     <img class="u-header__logo-img g-width-90"
-                         src="<?= \Cryslo\Core\Utils::addVersionToCssFile('/img/logo-dark.png') ?>"
+                         src="<?= \Edlin\Core\Utils::addVersionToFile('/img/logo-dark.png') ?>"
                          width="120"
                          height="48"
                          alt="Ross Edlin Logo">

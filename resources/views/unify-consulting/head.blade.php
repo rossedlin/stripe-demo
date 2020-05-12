@@ -2,10 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Ross Edlin
- * Date: 07/09/2017
+ * Date: 12/05/2020
  * Time: 12:51
- *
- * @var \App\Objects\Web\Meta $meta
  */
 ?>
 <!-- Title -->
@@ -25,9 +23,9 @@
 <link rel="shortcut icon" href="favicon.ico">
 
 <!-- CSS Styles -->
-<link rel="stylesheet" href="<?= \Cryslo\Core\Utils::addVersionToCssFile('/css/core.min.css') ?>">
+<link rel="stylesheet" href="<?= \Edlin\Core\Utils::addVersionToFile('/css/core.min.css') ?>">
 <!-- End CSS Styles -->
 
 <!-- JavaScript -->
-<script src="<?= \Cryslo\Core\Utils::addVersionToCssFile('/js/core.js') ?>"></script>
+<script src="<?= \Edlin\Core\Utils::addVersionToFile('/js/core.js') ?>"></script>
 <!-- End JavaScript -->
