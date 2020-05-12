@@ -77,7 +77,7 @@
         <!-- Stripe Payment -->
         <div class="col-sm-12 mt-5">
             <div class="row">
-                @include('stripe.custom')
+                @include('stripe.checkout')
             </div>
         </div>
         <!-- End Stripe Payment -->
