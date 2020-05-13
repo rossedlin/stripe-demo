@@ -9,34 +9,58 @@
  * @var string $amount
  * @var string $currency_code
  * @var string $publish_key
+ * @var string $checkout_session_id
  */
 ?>
 
-<div class="card col-xs-12 col-md-6" style="margin-bottom: 30px;">
+<div class="card col-xs-12 col-lg-12" style="padding: 50px;">
     <div class="card-block">
         <h4 class="card-title">Stripe Checkout - ID #<?= $id ?></h4>
-        <p class="card-text">Stripe's embedded payment form, Checkout, simplifies and secures online payment
-            processing. Quickly integrate Checkout into your site to provide your users with a streamlined,
-            mobile-ready payment experience that is constantly improving.</p>
+        <p class="card-text">
+            This is Stripes Checkout form, it's a simplified design which you can integrate into your site.<br/>
+            It'll <span style="font-weight: 500; font-style: italic; color: #0b2c0c;">popup</span> when you click the
+            button.<br/>
+            Don't worry, this is in <span style="font-weight: bold; color: #55161f;">test mode</span> so no money is
+            actually transferred!
+        </p>
 
-        <div class="mx-auto">
-            <form action="/portfolio/stripe/authorise" method="POST">
-                <script
-                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                        data-key="<?= $publish_key ?>"
-                        data-amount="<?= $amount ?>"
-                        data-name="Ross Edlin (Demo)"
-                        data-description="Widget"
-                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                        data-locale="auto"
-                        data-zip-code="true"
-                        data-currency="<?= $currency_code ?>">
-                </script>
-
-                <input type="hidden" name="id" value="<?= $id ?>"/>
-                <input type="hidden" name="_token" value="<?= csrf_token() ?>"/>
-            </form>
+        <div id="pay-button-container">
+            <button id="pay-button" class="btn btn-primary">
+                <span style="font-size:18px; line-height: 32px;">Click here to try Stripe</span>
+                <span id="pay-button-loading" class="fas fa-spinner fa-spin"
+                      style="display:none; font-size:24px; margin-left: 5px;"></span>
+            </button>
         </div>
 
+        <div id="pay-message" class="g-mt-20"></div>
     </div>
 </div>
+
+<script>
+
+    /**
+     *
+     */
+
+    $("#pay-button").click(function(){
+
+        /**
+         * Show loading animation
+         */
+        $('#pay-button').prop('disabled', true);
+        $('#pay-button-loading').show();
+
+        /**
+         * Stripe Redirect
+         */
+        let stripe = Stripe('<?= $publish_key ?>');
+        stripe.redirectToCheckout({
+            sessionId: '<?= $checkout_session_id ?>'
+        }).then(function (result) {
+            // todo
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer
+            // using `result.error.message`.
+        });
+    });
+</script>
