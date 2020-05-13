@@ -56,19 +56,17 @@
 
         <div class="col-sm-12 mt-5 mb-5">
             <div class="links">
-                <a href="https://www.rossedlin.com/" target="_blank">Home</a>
-                <a href="https://laracasts.com">Laracasts</a>
-                <a href="https://laravel-news.com">News</a>
-                <a href="https://blog.laravel.com">Blog</a>
-                <a href="https://nova.laravel.com">Nova</a>
-                <a href="https://forge.laravel.com">Forge</a>
-                <a href="https://github.com/laravel/laravel">GitHub</a>
+                <a href="<?= env('APP_URL') ?>">Home</a>
+                <a href="https://www.rossedlin.com/" target="_blank">www.rossedlin.com</a>
+                <a href="https://www.rossedlin.com/linkedin" target="_blank">LinkedIn</a>
+                <a href="https://www.rossedlin.com/github" target="_blank">GitHub</a>
             </div>
         </div>
 
-
-        <div class="row text-center">
-            @yield('content')
+        <div class="col-sm-12 mt-5 mb-5">
+            <div class="row text-center">
+                @yield('content')
+            </div>
         </div>
 
     </div>

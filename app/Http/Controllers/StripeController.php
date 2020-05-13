@@ -36,8 +36,8 @@ class StripeController extends Controller
                     'quantity'    => 1,
                 ]
             ],
-            'success_url'          => 'https://localhost/success?session_id={CHECKOUT_SESSION_ID}',
-            'cancel_url'           => 'https://localhost/cancel',
+            'success_url'          => env('APP_URL') . '/success?session_id={CHECKOUT_SESSION_ID}',
+            'cancel_url'           => env('APP_URL'),
         ]);
 
         return view('index', [
@@ -46,22 +46,13 @@ class StripeController extends Controller
             'currency_code'       => self::getCurrencyCode(),
             'publish_key'         => self::getPublishKey(),
             'checkout_session_id' => $session->id,
-            'url_ajax_authorise'  => secure_url('portfolio/stripe/ajax_authorise'),
             'csrf_token'          => csrf_token(),
         ]);
     }
 
     public function success()
     {
-        return view('index', [
-            'id'                  => self::getId(),
-            'amount'              => self::getAmount(),
-            'currency_code'       => self::getCurrencyCode(),
-            'publish_key'         => self::getPublishKey(),
-            'checkout_session_id' => $session->id,
-            'url_ajax_authorise'  => secure_url('portfolio/stripe/ajax_authorise'),
-            'csrf_token'          => csrf_token(),
-        ]);
+        return view('success');
     }
 
     /**

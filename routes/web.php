@@ -15,3 +15,4 @@
  * Stripe
  */
 Route::get('/', 'StripeController');
+Route::get('/success', 'StripeController@success');

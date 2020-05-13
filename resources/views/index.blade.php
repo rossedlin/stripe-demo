@@ -1,4 +1,4 @@
-@extends('layout.stripe')
+@extends('layout.default')
 
 @section('content')
     <!-- Heading -->
