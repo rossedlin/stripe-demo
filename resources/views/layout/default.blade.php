@@ -15,8 +15,8 @@
 
     <title>Stripe</title>
 
-    <link href="<?= \Edlin\Core\Utils::addVersionToFile("/css/app.css"); ?>" rel="stylesheet">
-    <script src="<?= \Edlin\Core\Utils::addVersionToFile("/js/app.js"); ?>"></script>
+    <link href="<?= config('app.url') . \Edlin\Core\Utils::addVersionToFile("/css/app.css", config('app.version')); ?>" rel="stylesheet">
+    <script src="<?= config('app.url') . \Edlin\Core\Utils::addVersionToFile("/js/app.js", config('app.version')); ?>"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
