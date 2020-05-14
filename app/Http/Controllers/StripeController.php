@@ -41,6 +41,8 @@ class StripeController extends Controller
         ]);
 
         return view('index', [
+            'cssVersion'          => md5(file_get_contents(__DIR__ . '/../../../public/css/app.css')),
+            'jsVersion'           => md5(file_get_contents(__DIR__ . '/../../../public/js/app.js')),
             'id'                  => self::getId(),
             'amount'              => self::getAmount(),
             'currency_code'       => self::getCurrencyCode(),
@@ -52,7 +54,10 @@ class StripeController extends Controller
 
     public function success()
     {
-        return view('success');
+        return view('success', [
+            'cssVersion' => md5(file_get_contents(__DIR__ . '/../../../public/css/app.css')),
+            'jsVersion'  => md5(file_get_contents(__DIR__ . '/../../../public/js/app.js')),
+        ]);
     }
 
     /**
