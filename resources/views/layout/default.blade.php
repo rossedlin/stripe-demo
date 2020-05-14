@@ -4,6 +4,9 @@
  * User: Ross Edlin
  * Date: 2020-05-13
  * Time: 13:18
+ *
+ * @var string $cssVersion
+ * @var string $jsVersion
  */
 ?>
 
@@ -15,8 +18,8 @@
 
     <title>Stripe</title>
 
-    <link href="<?= config('app.url') . \Edlin\Core\Utils::addVersionToFile("/css/app.css", config('app.version')); ?>" rel="stylesheet">
-    <script src="<?= config('app.url') . \Edlin\Core\Utils::addVersionToFile("/js/app.js", config('app.version')); ?>"></script>
+    <link href="<?= config('app.url') . \Edlin\Core\Utils::addVersionToFile("/css/app.css", $cssVersion); ?>" rel="stylesheet">
+    <script src="<?= config('app.url') . \Edlin\Core\Utils::addVersionToFile("/js/app.js", $jsVersion); ?>"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
