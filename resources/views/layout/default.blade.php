@@ -62,7 +62,8 @@
                 <a href="https://www.rossedlin.com/" target="_blank">Home</a>
                 <a href="https://www.rossedlin.com/portfolio/" target="_blank">Portfolio</a>
                 <a href="https://www.rossedlin.com/linkedin" target="_blank">LinkedIn</a>
-                <a href="https://www.rossedlin.com/github" target="_blank">GitHub</a>
+                <a href="https://github.com/rossedlin/stripe-demo/blob/master/app/Http/Controllers/StripeController.php"
+                   target="_blank">GitHub (Source Code)</a>
             </div>
         </div>
 
